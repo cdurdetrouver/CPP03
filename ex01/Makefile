@@ -1,8 +1,8 @@
-NAME = FrapTrap
+NAME = ScavTrap
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -I$(INCLUDE)
 INCLUDE = includes
 SRC_DIR = src
-SRC = src/main.cpp src/ClapTrap.cpp src/ScavTrap.cpp src/FragTrap.cpp
+SRC = src/main.cpp src/ClapTrap.cpp src/ScavTrap.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

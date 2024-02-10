@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
+/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 00:33:23 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/05 00:55:34 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/10 13:17:57 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ DiamondTrap::~DiamondTrap()
 	std::cout << "Destructor DiamondTrap called for " << this->name << std::endl;
 }
 
-void	DiamondTrap::operator=(const DiamondTrap& diamondTrap)
+DiamondTrap	&DiamondTrap::operator=(const DiamondTrap& diamondTrap)
 {
 	if (this != &diamondTrap)
 	{
@@ -59,6 +59,7 @@ void	DiamondTrap::operator=(const DiamondTrap& diamondTrap)
 		this->ep = diamondTrap.ep;
 		this->dmg = diamondTrap.dmg;
 	}
+	return (*this);
 }
 
 void	DiamondTrap::whoAmI( void )

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
+/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 00:20:57 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/05 00:28:57 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/10 13:13:28 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,15 @@ FragTrap::FragTrap(void)
 	this->dmg = 20;
 }
 
-FragTrap::FragTrap( std::string name)
+FragTrap::FragTrap( std::string name) : ClapTrap(name)
 {
-	this->name = name;
 	std::cout << "FragTrap constructor called for " << this->name << std::endl;
 	this->hp = 100;
 	this->ep = 50;
 	this->dmg = 20;
 }
 
-FragTrap::FragTrap( const FragTrap &FragTrap) : ClapTrap(name)
+FragTrap::FragTrap( const FragTrap &FragTrap) : ClapTrap(FragTrap.name)
 {
 	std::cout << "Copy FragTrap constructor called" << std::endl;
 	this->hp = FragTrap.hp;
@@ -44,7 +43,7 @@ FragTrap::~FragTrap()
 	std::cout << "Destructor FragTrap called for " << this->name << std::endl;
 }
 
-void	FragTrap::operator=(const FragTrap& FragTrap)
+FragTrap	&FragTrap::operator=(const FragTrap& FragTrap)
 {
 	if (this != &FragTrap)
 	{
@@ -54,6 +53,7 @@ void	FragTrap::operator=(const FragTrap& FragTrap)
 		this->ep = FragTrap.ep;
 		this->dmg = FragTrap.dmg;
 	}
+	return (*this);
 }
 
 void	FragTrap::highFivesGuys(void)

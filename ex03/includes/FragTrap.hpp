@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
+/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 00:21:06 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/05 00:46:40 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/10 13:15:53 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <iostream>
 #include "ClapTrap.hpp"
 
-class FragTrap : public virtual ClapTrap
+class FragTrap : virtual public ClapTrap
 {
 	public:
 		FragTrap( void );
@@ -25,9 +25,9 @@ class FragTrap : public virtual ClapTrap
 		FragTrap( const FragTrap &Fragtrap);
 		~FragTrap();
 
-		void	operator=( const FragTrap &Fragtrap);
+		FragTrap	&operator=( const FragTrap &Fragtrap);
 
-		void	highFivesGuys(void);
+		void		highFivesGuys(void);
 };
 
 #endif

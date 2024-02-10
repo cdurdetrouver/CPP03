@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
+/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 00:34:00 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/05 00:43:45 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/10 13:18:15 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ class DiamondTrap : public ScavTrap, public FragTrap
 		DiamondTrap( const DiamondTrap &DiamondTrap);
 		~DiamondTrap();
 
-		void	operator=( const DiamondTrap &DiamondTrap);
+		DiamondTrap	&operator=( const DiamondTrap &DiamondTrap);
 
-		void whoAmI();
+		void		whoAmI();
 };
 
 #endif

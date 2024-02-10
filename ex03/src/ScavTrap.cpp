@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
+/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:51:21 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/05 00:28:10 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/10 13:12:21 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,15 @@ ScavTrap::ScavTrap(void)
 	this->dmg = 20;
 }
 
-ScavTrap::ScavTrap( std::string name)
+ScavTrap::ScavTrap( std::string name) : ClapTrap(name)
 {
-	this->name = name;
 	std::cout << "ScavTrap constructor called for " << this->name << std::endl;
 	this->hp = 100;
 	this->ep = 50;
 	this->dmg = 20;
 }
 
-ScavTrap::ScavTrap( const ScavTrap &scavtrap) : ClapTrap(name)
+ScavTrap::ScavTrap( const ScavTrap &scavtrap) : ClapTrap(scavtrap.name)
 {
 	std::cout << "Copy ScavTrap constructor called" << std::endl;
 	this->hp = scavtrap.hp;
@@ -44,7 +43,7 @@ ScavTrap::~ScavTrap()
 	std::cout << "Destructor ScavTrap called for " << this->name << std::endl;
 }
 
-void	ScavTrap::operator=(const ScavTrap& scavtrap)
+ScavTrap	&ScavTrap::operator=(const ScavTrap &scavtrap)
 {
 	if (this != &scavtrap)
 	{
@@ -54,6 +53,7 @@ void	ScavTrap::operator=(const ScavTrap& scavtrap)
 		this->ep = scavtrap.ep;
 		this->dmg = scavtrap.dmg;
 	}
+	return (*this);
 }
 
 void	ScavTrap::guardGate( void )

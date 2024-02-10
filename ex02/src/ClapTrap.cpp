@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gbazart <gabriel.bazart@gmail.com>         +#+  +:+       +#+        */
+/*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 22:54:03 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/05 00:17:46 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/10 13:12:36 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ ClapTrap::ClapTrap(const ClapTrap& clap) : name(clap.name), hp(clap.hp), ep(clap
 	std::cout << "Copy ClapTrap constructor called" << std::endl;
 }
 
-void	ClapTrap::operator=(const ClapTrap &clap)
+ClapTrap	&ClapTrap::operator=(const ClapTrap &clap)
 {
 	if (this != &clap)
 	{
@@ -42,6 +42,7 @@ void	ClapTrap::operator=(const ClapTrap &clap)
 		this->ep = clap.ep;
 		this->dmg = clap.dmg;
 	}
+	return (*this);
 }
 
 void	ClapTrap::attack(const std::string& target)
