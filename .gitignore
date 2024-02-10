@@ -3,7 +3,4 @@
 *.o
 
 # executable
-ex00/ClapTrap
-ex01/ScavTrap
-ex02/FragTrap
-ex03/DiamondTrap
+ex0*/*Trap
