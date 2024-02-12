@@ -57,6 +57,15 @@ int main(void)
 	a.beRepaired(1000);
 
 	std::cout << std::endl;
+	std::cout << "Lose hp until no hp :" << std::endl;
+	for (int i = 0; i < 3; i ++)
+	{
+		a.takeDamage(10);
+	}
+	a.attack("undefined");
+	a.beRepaired(1000);
+
+	std::cout << std::endl;
 	std::cout << "Destructor :" << std::endl;
 	return (0);
 }
