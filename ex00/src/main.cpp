@@ -6,11 +6,12 @@
 /*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 22:54:12 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/10 17:12:19 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/12 13:05:02 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+#include <iostream>
 
 int main(void)
 {

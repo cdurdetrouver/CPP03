@@ -6,7 +6,7 @@
 /*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 00:33:23 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/10 17:54:29 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/12 13:15:43 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ DiamondTrap	&DiamondTrap::operator=(const DiamondTrap& diamondTrap)
 void	DiamondTrap::whoAmI( void )
 {
 	if (this->hp == 0)
-		std::cout << "ClapTrap " << this->name <<  " is dead !!!" << std::endl;
+		std::cout << "DiamondTrap " << this->name <<  " is dead !!!" << std::endl;
 	else
 		std::cout << "I am " << this->name <<", and my ClapTrap name is " << this->ClapTrap::name << std::endl;
 }

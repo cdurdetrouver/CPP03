@@ -6,7 +6,7 @@
 /*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 00:20:57 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/10 17:45:56 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/12 13:13:46 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ FragTrap	&FragTrap::operator=(const FragTrap& FragTrap)
 void	FragTrap::highFivesGuys(void)
 {
 	if (this->hp == 0)
-		std::cout << "ClapTrap " << this->name <<  " is dead !!!" << std::endl;
+		std::cout << "FragTrap " << this->name <<  " is dead !!!" << std::endl;
 	else
 		std::cout << "FragTrap " << this->name << " request a highfive!" << std::endl;
 }

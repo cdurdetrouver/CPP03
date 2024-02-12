@@ -6,15 +6,16 @@
 /*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:51:21 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/10 17:44:51 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/12 13:15:16 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void) : ClapTrap("undefined")
+ScavTrap::ScavTrap(void)
 {
 	std::cout << "Default ScavTrap constructor called" << std::endl;
+	this->name = "undefined";
 	this->hp = 100;
 	this->ep = 50;
 	this->dmg = 20;
@@ -58,7 +59,7 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &scavtrap)
 void	ScavTrap::guardGate( void )
 {
 	if (this->hp == 0)
-		std::cout << "ClapTrap " << this->name <<  " is dead !!!" << std::endl;
+		std::cout << "ScavTrap " << this->name <<  " is dead !!!" << std::endl;
 	else
 		std::cout << "ScavTrap " << this->name << " is now in Gate keeper mode" << std::endl;
 }
@@ -66,7 +67,7 @@ void	ScavTrap::guardGate( void )
 void	ScavTrap::attack(const std::string& target)
 {
 	if (this->hp == 0)
-		std::cout << "ClapTrap " << this->name <<  " is dead !!!" << std::endl;
+		std::cout << "ScavTrap " << this->name <<  " is dead !!!" << std::endl;
 	else if (this->ep >= 1)
 	{
 		std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->dmg << " points of damage!" << std::endl;

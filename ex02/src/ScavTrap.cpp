@@ -6,7 +6,7 @@
 /*   By: gbazart <gbazart@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 23:51:21 by gbazart           #+#    #+#             */
-/*   Updated: 2024/02/10 13:12:21 by gbazart          ###   ########.fr       */
+/*   Updated: 2024/02/12 13:14:11 by gbazart          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,12 +58,17 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &scavtrap)
 
 void	ScavTrap::guardGate( void )
 {
-	std::cout << "ScavTrap " << this->name << " is now in Gate keeper mode" << std::endl;
+	if (this->hp == 0)
+		std::cout << "ScavTrap " << this->name <<  " is dead !!!" << std::endl;
+	else
+		std::cout << "ScavTrap " << this->name << " is now in Gate keeper mode" << std::endl;
 }
 
 void	ScavTrap::attack(const std::string& target)
 {
-	if (this->ep >= 1)
+	if (this->hp == 0)
+		std::cout << "ScavTrap " << this->name <<  " is dead !!!" << std::endl;
+	else if (this->ep >= 1)
 	{
 		std::cout << "ScavTrap " << this->name << " attacks " << target << ", causing " << this->dmg << " points of damage!" << std::endl;
 		this->ep--;
